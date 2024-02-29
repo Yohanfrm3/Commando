@@ -10,11 +10,12 @@ class CommandFormatError extends FriendlyError {
 	 */
 	constructor(msg) {
 		super(
-			`Invalid command usage. The \`${msg.command.name}\` command's accepted format is: ${msg.usage(
+			`Hey! That's an invalid command usage. The valid way to use \`${msg.command.name}\` is: ${msg.usage(
 				msg.command.format,
 				msg.guild ? undefined : null,
 				msg.guild ? undefined : null
-			)}. Use ${msg.anyUsage(
+			)}.
+			Use ${msg.anyUsage(
 				`help ${msg.command.name}`,
 				msg.guild ? undefined : null,
 				msg.guild ? undefined : null
